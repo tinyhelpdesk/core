@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "demo-plugin": "link:../../demo-plugin",
+    "test-plugin": "link:../../test-plugin"
+  }
+}

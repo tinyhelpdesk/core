@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "max-len": ["error", { "code": 120, "ignoreUrls": true }],
+    "keyword-spacing": ["error", { "before": true }],
+    "curly": ["error"],
+    "semi": ["error", "always"],
+    "@typescript-eslint/member-ordering": [
+      2,
+      {
+        "default": [
+          "public-static-field",
+          "public-instance-field",
+          "private-static-field",
+          "private-instance-field",
+          "private-constructor",
+          "public-constructor",
+          "private-instance-method",
+          "public-instance-method",
+          "protected-instance-method"
+        ]
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ]
+  }
+}
